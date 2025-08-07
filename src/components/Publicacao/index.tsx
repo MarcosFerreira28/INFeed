@@ -14,13 +14,14 @@ export default function Publicacao(props: IPublicacaoProps) {
             Non quos omnis ut autem labore nam vero consequatur est porro similique ad adipisci quisquam!
             </p>
 
-            <div style={{display: 'flex', flexDirection: 'column', gap: '26px'}}>
+            <div className={styles.feedbackContainer}>
                 <strong className={styles.feedbackTitle}>Deixe seu feedback</strong>
                 <textarea name="" className={styles.feedbackText} placeholder='Insira o seu feedback'></textarea>
                 <button className={styles.button}>Comentar</button>
             </div>
 
             <Comentarios />
+            
         </div>
     )
 }
