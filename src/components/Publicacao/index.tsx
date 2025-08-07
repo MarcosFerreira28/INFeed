@@ -1,5 +1,6 @@
 import type IPublicacaoProps from '../../InterfacePublicacao/InterfacePublicacao';
 import Cabecalho from '../Cabecalho';
+import { Comentarios } from '../Comentarios';
 import styles from './styles.module.css';
 
 export default function Publicacao(props: IPublicacaoProps) {
@@ -18,6 +19,8 @@ export default function Publicacao(props: IPublicacaoProps) {
                 <textarea name="" className={styles.feedbackText} placeholder='Insira o seu feedback'></textarea>
                 <button className={styles.button}>Comentar</button>
             </div>
+
+            <Comentarios />
         </div>
     )
 }

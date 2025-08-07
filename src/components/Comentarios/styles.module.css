@@ -1,0 +1,66 @@
+.container {
+    width: 842px;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    gap: 13px;
+}
+
+.imgPerfil {
+    width: 62px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.info {
+    width: 756px;
+    height: 120px;
+    border-radius: 8px;
+    background: #1C1C2F;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 20px;
+}
+
+.nome {
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+.tempo {
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 14px;
+    color: #999999;
+}
+
+.comentario {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+.deletar {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 25px;
+    right: 30px;
+}
+
+.likeimg {
+    width: 20px;
+    height: 20px;
+}
+
+.likeqtd {
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 14px;
+    color: #DDDDDD;
+}
