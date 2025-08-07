@@ -1,7 +1,56 @@
+.publicacao {
+    width: 921px;
+    height: 656px;
+    border-radius: 20px;
+    background: #0E0E1B;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
 
 .descricao {
+    width: 842px;
+    height: 158px;
     font-family: Inter;
     font-weight: 400;
     font-size: 16px;
     color: #CCCCCC;
+}
+
+.feedbackTitle {
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.feedbackText {
+    width: 842px;
+    height: 112px;
+    border-radius: 8px;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 16px;
+    resize: none;
+    padding-left: 16px;
+    padding-top: 12px;
+}
+
+.feedbackText:focus {
+    outline: none;
+    border: none;
+}
+
+.button {
+    width: 139px;
+    height: 47px;
+    border-radius: 8px;
+    background: #036FDB;
+    border: none;
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 16px;
+    color: #FFFFFF;
 }
