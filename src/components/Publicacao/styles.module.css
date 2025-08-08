@@ -18,6 +18,8 @@
     font-weight: 400;
     font-size: 16px;
     color: #CCCCCC;
+    display: flex;
+    align-items: center;
 }
 
 .feedbackTitle {
@@ -28,7 +30,7 @@
 }
 
 .feedbackText {
-    width: 842px;
+    width: 826px;
     height: 112px;
     border-radius: 8px;
     font-family: Inter;
@@ -61,4 +63,5 @@
     font-weight: 700;
     font-size: 16px;
     color: #FFFFFF;
+    cursor: pointer;
 }

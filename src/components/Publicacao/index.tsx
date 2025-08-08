@@ -1,27 +1,65 @@
-import type IPublicacaoProps from '../../InterfacePublicacao/InterfacePublicacao';
+import type IPublicacaoProps from "../../InterfacePublicacao/InterfacePublicacao";
+import styles from './styles.module.css';
 import Cabecalho from '../Cabecalho';
 import { Comentarios } from '../Comentarios';
-import styles from './styles.module.css';
+import { useState } from 'react';
 
-export default function Publicacao(props: IPublicacaoProps) {
+export interface ComentarioProps {
+    nome: string;
+    fotoPerfil: string;
+    descricao: string;
+    numLikes: number;
+}
+
+interface PublicacaoProps extends IPublicacaoProps {
+    descricao: string;
+    comentarios?: ComentarioProps[];
+}
+
+export default function Publicacao(props: PublicacaoProps) {
+    const [comentarios, setComentarios] = useState<ComentarioProps[]>(props.comentarios || []);
+    const [novoComentario, setNovoComentario] = useState("");
+
+    const adicionaComentario = () => {
+        setComentarios(comentarios.concat(
+            {
+                nome: props.nome,
+                fotoPerfil: props.fotoPerfil,
+                descricao: novoComentario,
+                numLikes: 0
+            }
+        ));
+        setNovoComentario("");
+    };
+
     return (
         <div className={styles.publicacao}>
             <Cabecalho nome={props.nome} cargo={props.cargo} fotoPerfil={props.fotoPerfil} />
 
-            <p className={styles.descricao}>lorem ipsum <br /><br />
-            dolor sit amet. Ex laboriosam dolorem non tempore earum et voluptatem suscipit ut cupiditate nisi est odit voluptates. Nam magni amet ut ipsam molestiae aut facilis minus et quia reiciendis sed excepturi rerum ex consequatur minima! Ex rerum sunt et incidunt officia et veritatis deserunt. Sit soluta laboriosam et incidunt sequi et eius fugiat est temporibus similique rem illum natus sit unde eveniet. 
-            <br /><br />
-            Non quos omnis ut autem labore nam vero consequatur est porro similique ad adipisci quisquam!
-            </p>
+            <p className={styles.descricao}>{props.descricao}</p>
 
             <div className={styles.feedbackContainer}>
                 <strong className={styles.feedbackTitle}>Deixe seu feedback</strong>
-                <textarea name="" className={styles.feedbackText} placeholder='Insira o seu feedback'></textarea>
-                <button className={styles.button}>Comentar</button>
+                <textarea
+                    className={styles.feedbackText}
+                    placeholder='Insira o seu feedback'
+                    value={novoComentario}
+                    onChange={e => setNovoComentario(e.target.value)}
+                ></textarea>
+                <button className={styles.button} onClick={adicionaComentario}>Comentar</button>
             </div>
 
-            <Comentarios />
-            
+            {comentarios.length > 0 && (
+                comentarios.map((comentario, i) => (
+                    <Comentarios
+                        key={i}
+                        nome={comentario.nome}
+                        fotoPerfil={comentario.fotoPerfil}
+                        descricao={comentario.descricao}
+                        numLikes={comentario.numLikes}
+                    />
+                ))
+            )}
         </div>
     )
 }
