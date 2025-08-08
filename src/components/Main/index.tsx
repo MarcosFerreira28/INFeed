@@ -15,6 +15,8 @@ export default function Main() {
                     fotoPerfil="https://www.psicologo.com.br/wp-content/uploads/sou-uma-pessoa-boa-ou-nao.jpg" 
                     descricao="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
                     comentarios={[]}
+                    usuarioFoto={fotoMarcos}
+                    usuarioNome="Marcos Ferreira"
                 />
                 <Publicacao 
                     nome="Kleber Rodimildo" 
@@ -24,6 +26,8 @@ export default function Main() {
                     comentarios={[
                         { nome: 'Felipe Nunes', fotoPerfil: 'https://img.freepik.com/fotos-gratis/retrato-de-homem-branco-isolado_53876-40306.jpg', descricao: 'Comentário muito legal e cheio de coisas interessantes', numLikes: 3 },
                     ]}
+                    usuarioFoto={fotoMarcos}
+                    usuarioNome="Marcos Ferreira"
                 />
             </div>
         </main>

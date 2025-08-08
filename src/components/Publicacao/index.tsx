@@ -14,6 +14,8 @@ export interface ComentarioProps {
 interface PublicacaoProps extends IPublicacaoProps {
     descricao: string;
     comentarios?: ComentarioProps[];
+    usuarioNome: string;
+    usuarioFoto: string;
 }
 
 export default function Publicacao(props: PublicacaoProps) {
@@ -21,10 +23,14 @@ export default function Publicacao(props: PublicacaoProps) {
     const [novoComentario, setNovoComentario] = useState("");
 
     const adicionaComentario = () => {
+        if(novoComentario.trim() === ""){
+            alert("O comentário não pode estar vazio.");
+            return;
+        }
         setComentarios(comentarios.concat(
             {
-                nome: props.nome,
-                fotoPerfil: props.fotoPerfil,
+                nome: props.usuarioNome,
+                fotoPerfil: props.usuarioFoto,
                 descricao: novoComentario,
                 numLikes: 0
             }
