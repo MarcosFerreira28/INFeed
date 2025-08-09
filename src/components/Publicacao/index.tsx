@@ -23,6 +23,7 @@ export default function Publicacao(props: PublicacaoProps) {
         setComentarios(comentarios.concat(
             {
                 nome: props.usuarioNome,
+                data: Date(),
                 fotoPerfil: props.usuarioFoto,
                 descricao: novoComentario,
                 numLikes: 0
@@ -33,7 +34,7 @@ export default function Publicacao(props: PublicacaoProps) {
 
     return (
         <div className={styles.publicacao}>
-            <Cabecalho nome={props.nome} cargo={props.cargo} fotoPerfil={props.fotoPerfil} />
+            <Cabecalho nome={props.nome} cargo={props.cargo} fotoPerfil={props.fotoPerfil} data={props.data} />
 
             <p className={styles.descricao}>{props.descricao}</p>
 
@@ -53,6 +54,7 @@ export default function Publicacao(props: PublicacaoProps) {
                     <Comentarios
                         key={i}
                         nome={comentario.nome}
+                        data={comentario.data}
                         fotoPerfil={comentario.fotoPerfil}
                         descricao={comentario.descricao}
                         numLikes={comentario.numLikes}
