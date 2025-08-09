@@ -10,9 +10,9 @@ export default function Main() {
             
             <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
                 <Publicacao 
-                    nome="Sophia Torres" 
-                    cargo="Dentista" 
-                    fotoPerfil="https://www.psicologo.com.br/wp-content/uploads/sou-uma-pessoa-boa-ou-nao.jpg" 
+                    nome="Kaio Jorge" 
+                    cargo="Jogador de Futebol" 
+                    fotoPerfil="https://santaportal.com.br/wp/wp-content/uploads/2025/08/kaio-jorge.jpg" 
                     descricao="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
                     comentarios={[]}
                     usuarioFoto={fotoMarcos}
@@ -25,6 +25,7 @@ export default function Main() {
                     descricao="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
                     comentarios={[
                         { nome: 'Felipe Nunes', fotoPerfil: 'https://img.freepik.com/fotos-gratis/retrato-de-homem-branco-isolado_53876-40306.jpg', descricao: 'Comentário muito legal e cheio de coisas interessantes', numLikes: 3 },
+                        { nome: 'Ana Clara', fotoPerfil: 'https://static.vecteezy.com/ti/fotos-gratis/p2/3491968-imagem-retrato-de-mulher-linda-encantadora-close-up-gratis-foto.jpg', descricao: 'Gostei bastante do que você escreveu!', numLikes: 1 }
                     ]}
                     usuarioFoto={fotoMarcos}
                     usuarioNome="Marcos Ferreira"

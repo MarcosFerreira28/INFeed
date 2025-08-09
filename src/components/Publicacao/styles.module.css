@@ -64,4 +64,9 @@
     font-size: 16px;
     color: #FFFFFF;
     cursor: pointer;
+    transition: box-shadow 0.3s;
+}
+
+.button:hover {
+    box-shadow: 0 0 16px 4px #036FDB;
 }

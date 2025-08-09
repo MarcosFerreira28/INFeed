@@ -1,25 +1,18 @@
 import type IPublicacaoProps from "../../InterfacePublicacao/InterfacePublicacao";
 import styles from './styles.module.css';
 import Cabecalho from '../Cabecalho';
-import { Comentarios } from '../Comentarios';
+import { Comentarios, type ComentariosProps } from '../Comentarios';
 import { useState } from 'react';
-
-export interface ComentarioProps {
-    nome: string;
-    fotoPerfil: string;
-    descricao: string;
-    numLikes: number;
-}
 
 interface PublicacaoProps extends IPublicacaoProps {
     descricao: string;
-    comentarios?: ComentarioProps[];
+    comentarios?: ComentariosProps[];
     usuarioNome: string;
     usuarioFoto: string;
 }
 
 export default function Publicacao(props: PublicacaoProps) {
-    const [comentarios, setComentarios] = useState<ComentarioProps[]>(props.comentarios || []);
+    const [comentarios, setComentarios] = useState<ComentariosProps[]>(props.comentarios || []);
     const [novoComentario, setNovoComentario] = useState("");
 
     const adicionaComentario = () => {
@@ -63,6 +56,9 @@ export default function Publicacao(props: PublicacaoProps) {
                         fotoPerfil={comentario.fotoPerfil}
                         descricao={comentario.descricao}
                         numLikes={comentario.numLikes}
+                        deletarComentario={() => {
+                            setComentarios(comentarios.filter((_, indice) => indice !== i)); //filtra colocando todos comentarios e só tira o que tem o indice = i
+                        }}
                     />
                 ))
             )}
