@@ -1,7 +1,27 @@
 .container {
-    width: 263px;
-    height: 73px;
+    height: 100px;
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: #0E0E1B;
+    margin-bottom: 29px;
+}
+
+.img {
+    width: 105px;
+    height: 60px;
+    opacity: 1;
+
+}
+
+.feed {
+    height: 67px;
+    font-family: Barlow;
+    font-weight: 500;
+    font-size: 64px;
+    color: #036FDB;
+    display: flex;
+    align-items: flex-end;
 }

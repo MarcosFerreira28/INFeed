@@ -1,0 +1,72 @@
+.publicacao {
+    width: 921px;
+    border-radius: 20px;
+    background: #0E0E1B;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 59px;
+    padding: 32px 0 44px 0;
+}
+
+
+.descricao {
+    width: 842px;
+    height: 158px;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 16px;
+    color: #CCCCCC;
+    display: flex;
+    align-items: center;
+}
+
+.feedbackTitle {
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.feedbackText {
+    width: 826px;
+    height: 112px;
+    border-radius: 8px;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 16px;
+    resize: none;
+    padding-left: 16px;
+    padding-top: 12px;
+}
+
+.feedbackText:focus {
+    outline: none;
+    border: none;
+}
+
+.feedbackContainer {
+    width: 842px;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+
+.button {
+    width: 139px;
+    height: 47px;
+    border-radius: 8px;
+    background: #036FDB;
+    border: none;
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 16px;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+}
+
+.button:hover {
+    box-shadow: 0 0 16px 4px #036FDB;
+}
