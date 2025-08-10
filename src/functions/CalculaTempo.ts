@@ -2,9 +2,11 @@ export default function CalculaTempo(dataPostagem: string): string {
     const horaPostagem = new Date(dataPostagem);
     const agora = new Date();
     const hora = Math.floor((agora.getTime() - horaPostagem.getTime()) / 1000 / 60 / 60);
+    const minutos = Math.floor((agora.getTime() - horaPostagem.getTime()) / 1000 / 60);
+
     let tempo = "";
     if (hora < 1){
-        tempo = "menos de 1h";
+        tempo = `${minutos}m`;
     }else if (hora < 24) {
         tempo = `${hora}h`;
     }else {

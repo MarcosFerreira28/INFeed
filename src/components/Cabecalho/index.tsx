@@ -14,7 +14,7 @@ export default function Cabecalho(props: IPublicacaoProps) {
                     <p className={styles.cargo}>{props.cargo}</p>
                 </div>
             </div>
-            <p className={styles.tempo}>Publicado há {tempo}</p> {/* colocar data dps */}
+            <p className={styles.tempo}>Publicado há {tempo}</p>
         </div>
     )
 }

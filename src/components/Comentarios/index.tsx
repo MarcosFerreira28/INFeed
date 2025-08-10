@@ -41,7 +41,7 @@ export function Comentarios({ nome, fotoPerfil, descricao, numLikes, deletarCome
                 <div className={styles.info}>
                     <div>
                         <strong className={styles.nome}>{nome}</strong>
-                        <p className={styles.tempo}>Cerca de {tempo}</p>
+                        <p className={styles.tempo}>{tempo.includes("m") ? `Há ${tempo}` : `Cerca de ${tempo}`}</p>
                     </div>
                     <img className={styles.deletar} src={deletarimg} alt="botao deletar" onClick={deletarComentario} />
                     <p className={styles.comentario}>{descricao}</p>
